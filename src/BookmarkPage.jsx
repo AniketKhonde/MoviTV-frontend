@@ -52,7 +52,7 @@ const BookmarkPage = () => {
     try {
       const endpoint = type === 'movie' 
         ? `https://movitv-backend.onrender.com/api/deletemoviebookmark/movie/${id}` 
-        : `https://movitv-backend.onrender.com/deletebookmark/tvseries/${id}`;
+        : `https://movitv-backend.onrender.com/api/deletebookmark/tvseries/${id}`;
   
       const response = await fetch(endpoint, { method: 'DELETE' });
       if (!response.ok) {
