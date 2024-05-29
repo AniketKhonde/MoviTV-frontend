@@ -47,7 +47,7 @@ const RegisterPage = () => {
         if (isUsernameValid && isEmailValid && isPasswordValid) {
             try {
                 // Perform registration logic and connect to the database
-                const response = await fetch('https://movitv-backend.onrender.com/api/register', {
+                const response = await fetch('https://movi-tv-backend.vercel.app/api/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

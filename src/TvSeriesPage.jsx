@@ -19,7 +19,7 @@ const TvSeriesPage = () => {
 
   const fetchTvSeries = async () => {
     try {
-      const response = await axios.get('https://movitv-backend.onrender.com/api/tvseries');
+      const response = await axios.get('https://movi-tv-backend.vercel.app/api/tvseries');
       setTvSeries(response.data);
     } catch (error) {
       console.error('Error fetching TV series:', error);
@@ -42,7 +42,7 @@ const TvSeriesPage = () => {
       }
 
       await axios.post(
-        'https://movitv-backend.onrender.com/api/addbookmark/tvseries',
+        'https://movi-tv-backend.vercel.app/api/addbookmark/tvseries',
         { userId, tvSeriesId,tmdbId },
         {
           headers: {
@@ -59,7 +59,7 @@ const TvSeriesPage = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://movitv-backend.onrender.com/api/search?query=${query}`);
+      const response = await axios.get(`https://movi-tv-backend.vercel.app/api/search?query=${query}`);
       console.log('Search response:', response.data); // Log response data for debugging
   
       // Check if the response contains any movie objects

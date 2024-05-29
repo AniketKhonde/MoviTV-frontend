@@ -17,7 +17,7 @@ const DetailInfoPage = () => {
   useEffect(() => {
     const fetchDetailInfo = async () => {
       try {
-        const response = await axios.get(`https://movitv-backend.onrender.com/api/detailinfo/${productId}`);
+        const response = await axios.get(`https://movi-tv-backend.vercel.app/api/detailinfo/${productId}`);
         setProduct(response.data);
 
         const genreResponse = await axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=62f625f1dfefb67f969cc005860b86f6&language=en-US');

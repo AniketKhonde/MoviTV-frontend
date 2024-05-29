@@ -38,7 +38,7 @@ const LoginPage = () => {
 
         if (isEmailValid && isPasswordValid) {
             try {
-                const response = await fetch('https://movitv-backend.onrender.com/api/login', {
+                const response = await fetch('https://movi-tv-backend.vercel.app/api/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

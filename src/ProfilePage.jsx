@@ -36,7 +36,7 @@ const ProfilePage = () => {
     };
 
     const fetchProfile = (userId) => {
-        fetch(`https://movitv-backend.onrender.com/api/profile/${userId}`)
+        fetch(`https://movi-tv-backend.vercel.app/api/profile/${userId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch profile data');
@@ -82,7 +82,7 @@ const ProfilePage = () => {
             // Format the date to 'yyyy-MM-dd' before sending
             const formattedDateOfBirth = editedProfile.dateOfBirth ? new Date(editedProfile.dateOfBirth).toISOString().split('T')[0] : null;
 
-            fetch(`https://movitv-backend.onrender.com/api/saveProfile/${userId}`, {
+            fetch(`https://movi-tv-backend.vercel.app/api/saveProfile/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

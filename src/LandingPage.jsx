@@ -28,7 +28,7 @@ const LandingPage = () => {
 
   const fetchTrendingMovies = async () => {
     try {
-      const response = await axios.get('https://movitv-backend.onrender.com/api/trendingmovies');
+      const response = await axios.get('https://movi-tv-backend.vercel.app/api/trendingmovies');
       setTrendingMovies(response.data);
     } catch (error) {
       console.error('Error fetching trending movies:', error);
@@ -37,7 +37,7 @@ const LandingPage = () => {
 
   const fetchRecommendedMovies = async () => {
     try {
-      const response = await axios.get('https://movitv-backend.onrender.com/api/recommend');
+      const response = await axios.get('https://movi-tv-backend.vercel.app/api/recommend');
       setRecommendedMovies(response.data);
     } catch (error) {
       console.error('Error fetching recommended movies:', error);
@@ -54,7 +54,7 @@ const LandingPage = () => {
       }
 
       await axios.post(
-        'https://movitv-backend.onrender.com/api/addmoviebookmark/movie',
+        'https://movi-tv-backend.vercel.app/api/addmoviebookmark/movie',
         { userId, movieId, tmdbId },
         {
           headers: {
@@ -71,7 +71,7 @@ const LandingPage = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://movitv-backend.onrender.com/api/search?query=${query}`);
+      const response = await axios.get(`https://movi-tv-backend.vercel.app/api/search?query=${query}`);
       console.log('Search response:', response.data); // Log response data for debugging
 
       // Check if the response contains any movie objects

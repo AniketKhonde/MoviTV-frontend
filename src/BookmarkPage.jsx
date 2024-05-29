@@ -21,14 +21,14 @@ const BookmarkPage = () => {
     try {
       const userId = localStorage.getItem('userId');
 
-      const moviesResponse = await fetch(`https://movitv-backend.onrender.com/api/showmoviebookmarks/movies/${userId}`);
+      const moviesResponse = await fetch(`https://movi-tv-backend.vercel.app/api/showmoviebookmarks/movies/${userId}`);
       if (!moviesResponse.ok) {
         throw new Error('Failed to fetch bookmarked movies');
       }
       const moviesData = await moviesResponse.json();
       setBookmarkedMovies(moviesData);
 
-      const tvSeriesResponse = await fetch(`https://movitv-backend.onrender.com/api/showbookmarks/tvseries/${userId}`);
+      const tvSeriesResponse = await fetch(`https://movi-tv-backend.vercel.app/api/showbookmarks/tvseries/${userId}`);
       if (!tvSeriesResponse.ok) {
         throw new Error('Failed to fetch bookmarked TV series');
       }
@@ -51,8 +51,8 @@ const BookmarkPage = () => {
   const removeBookmark = async (id,type) => {
     try {
       const endpoint = type === 'movie' 
-        ? `https://movitv-backend.onrender.com/api/deletemoviebookmark/movie/${id}` 
-        : `https://movitv-backend.onrender.com/api/deletebookmark/tvseries/${id}`;
+        ? `https://movi-tv-backend.vercel.app/api/deletemoviebookmark/movie/${id}` 
+        : `https://movi-tv-backend.vercel.app/api/deletebookmark/tvseries/${id}`;
   
       const response = await fetch(endpoint, { method: 'DELETE' });
       if (!response.ok) {
