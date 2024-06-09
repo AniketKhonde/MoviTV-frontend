@@ -113,7 +113,7 @@ const LoginPage = () => {
                         {/* Login Error */}
                         {loginError && <p className="text-red-500 text-sm mt-2">{loginError}</p>}
                     </form>
-                    <p className='p-4'>Not have account! <Link to="/register" className="text-blue-600">Register here</Link></p>
+                    <p className='p-4'>Not have account! <Link to="/RegisterPage" className="text-blue-600">Register here</Link></p>
                 </div>
             </div>
 
