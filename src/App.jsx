@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './LandingPage';
-import LoginPage from './LoginPage';
-import RegisterPage from './RegisterPage';
-import ProfilePage from './ProfilePage';
-import BookmarkPage from './BookmarkPage';
-import TvSeriesPage from './TvSeriesPage';
-import MoviesPage from './MoviesPage';
-import DetailInfoPage from './DetailInfoPage';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage';
+import BookmarkPage from './pages/BookmarkPage';
+import TvSeriesPage from './pages/TvSeriesPage';
+import MoviesPage from './pages/MoviesPage';
+import DetailInfoPage from './pages/DetailInfoPage';
 
 const App = () => {
     return (
